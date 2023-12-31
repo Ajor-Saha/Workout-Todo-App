@@ -11,7 +11,7 @@ const WorkoutDetails = ({ workout }) => {
         if (!user) {
             return
         }
-        const response = await fetch('/api/workouts/' + workout._id, {
+        const response = await fetch('https://workout-todo-app.vercel.app/api/workouts/' + workout._id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`
